@@ -18,8 +18,8 @@ resource "aws_s3_object" "object" {
 resource "aws_s3_object" "object-2" {
   bucket = aws_s3_bucket.example.id
   key    = "Main.service"
-  source = "/etc/systemd/system/Main.service"
-  etag = filemd5("/etc/systemd/system/Main.service")
+  source = "Main.service"
+  etag = filemd5("Main.service")
 }
  
 
