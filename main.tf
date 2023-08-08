@@ -80,7 +80,7 @@ resource "aws_iam_policy" "bucket_policy" {
 }
 
 resource "aws_iam_role" "ec2_role" {
-  name = "ec2.-role"
+  name = "s3Access-role"
 
   assume_role_policy = jsonencode({ 
 
