@@ -104,7 +104,7 @@ resource "aws_iam_role_policy_attachment" "some_bucket_policy" {
 
 
 resource "aws_iam_instance_profile" "some_profile" {
-  name = "new1afkzbds"
+  name = "s3_access"
   role = aws_iam_role.ec2_role.name
 }
 
@@ -113,7 +113,7 @@ resource "aws_iam_instance_profile" "some_profile" {
 
 
 resource "aws_security_group" "elb_sg" {
-  name        = "avnnfgjhersgfkttyukfycukmrse"
+  name        = "s3_access"
   vpc_id = aws_default_vpc.default.id
 
   ingress {
