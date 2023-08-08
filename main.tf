@@ -80,7 +80,7 @@ resource "aws_iam_policy" "bucket_policy" {
 }
 
 resource "aws_iam_role" "ec2_role" {
-  name = "ecssssssss2reuigthsjakebhd-0-ioki"
+  name = "ec2.-role"
 
   assume_role_policy = jsonencode({ 
 
