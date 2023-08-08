@@ -14,6 +14,13 @@ resource "aws_s3_object" "object" {
   etag = filemd5("Main")
 }
 
+resource "aws_s3_object" "object" {
+  bucket = aws_s3_bucket.example.id
+  key    = ".env"
+  source = "/home/user/Desktop/.env"
+  etag = filemd5("Main")
+}
+
 
 resource "aws_s3_object" "object-2" {
   bucket = aws_s3_bucket.example.id
@@ -38,6 +45,8 @@ resource "aws_instance" "project111" {
        sudo apt-get update -y
        sudo apt-get install awscli -y
        sudo apt install awscli
+       sudo apt install postgresql -y	
+
        aws s3 cp s3://point-loop/Main /home/ubuntu
        aws s3 cp s3://point-loop/Main.service    /etc/systemd/system
        cd /home/ubuntu
