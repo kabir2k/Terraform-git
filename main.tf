@@ -10,8 +10,8 @@ resource "aws_s3_bucket" "example" {
 resource "aws_s3_object" "object" {
   bucket = aws_s3_bucket.example.id
   key    = "Main"
-  source = "/home/user/Desktop/Main"
-  etag = filemd5("/home/user/Desktop/Main")
+  source = "Main"
+  etag = filemd5("Main")
 }
 
 
