@@ -54,7 +54,7 @@ resource "aws_instance" "project111" {
 
 	
 resource "aws_iam_policy" "bucket_policy" {
-  name        = "my-name-new1-0"
+  name        = "my-name-new1-0-jyd"
   path        = "/"
   description = "Allow "
 
@@ -80,7 +80,7 @@ resource "aws_iam_policy" "bucket_policy" {
 }
 
 resource "aws_iam_role" "ec2_role" {
-  name = "ecssssssss2reuigthsjakebhd-0"
+  name = "ecssssssss2reuigthsjakebhd-0-ioki"
 
   assume_role_policy = jsonencode({ 
 
@@ -113,7 +113,7 @@ resource "aws_iam_instance_profile" "some_profile" {
 
 
 resource "aws_security_group" "elb_sg" {
-  name        = "avnnfgjhersgfktrse"
+  name        = "avnnfgjhersgfkttyukfycukmrse"
   vpc_id = aws_default_vpc.default.id
 
   ingress {
